@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Loja Gamer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container my-5">
+        <h2 class="text-center">Entrar na Loja Gamer</h2>
+        <form id="login-form" class="col-md-6 mx-auto">
+            <div class="form-group">
+                <label for="username">Usuário</label>
+                <input type="text" class="form-control" id="username" placeholder="Digite seu usuário" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+        </form>
+    </div>
+
+    <!-- Scripts para Bootstrap e JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Função de login
+        $(document).ready(function(){
+            $("#login-form").submit(function(event){
+                event.preventDefault(); // Previne o comportamento padrão de envio de formulário
+
+                // Obtendo os valores do usuário e senha
+                var username = $("#username").val();
+                var password = $("#password").val();
+
+                // Validação simples: Usuário e senha predefinidos
+                if (username === "admin" && password === "12345") {
+                    alert("Login bem-sucedido!");
+                    window.location.href = "home.html"; // Redireciona para a página de home (produtos)
+                } else {
+                    alert("Usuário ou senha incorretos. Tente novamente.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

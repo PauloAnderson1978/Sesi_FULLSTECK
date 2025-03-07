@@ -1,0 +1,22 @@
+img {
+    width: 100%;
+    padding: 20px;
+}
+
+.Iniciar {
+    display: flex;
+    background-color: rgb(41, 142, 209);
+    width: 120px;
+    height: 55px;
+    margin-left: 320px;
+    border-radius: 8px;
+}
+.Iniciar a{
+    display: flex;
+    color: aliceblue;
+    margin: auto;
+    letter-spacing: 1.5px;
+}
+.Iniciar:hover{
+    background-color: rgb(16, 84, 129) ;
+}
